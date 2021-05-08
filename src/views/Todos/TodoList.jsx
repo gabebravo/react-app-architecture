@@ -1,6 +1,6 @@
 export default function TodoList({ todos }) {
   return todos.length > 0 &&  (
-    <ul className="w-1/6">
+    <ul>
       { todos.map(todo => 
         <li key={todo.id} className="flex justify-between">
           <div>

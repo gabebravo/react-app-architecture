@@ -4,6 +4,7 @@ import {
 } from '../../hooks/useTodoMutations';
 import RqMessage from '../../shared/RqMessage'
 import TodoList from './TodoList'
+import TodoForm from './TodoForm'
 
 export default function Main() {
   const { data, error, isLoading, isFetching, isSuccess } = useGetTodos()
@@ -22,7 +23,10 @@ export default function Main() {
 
   return isSuccess && (
     <div className="flex justify-center mt-8">
-      <TodoList todos={data} />
+      <div className="flex-col w-1/5">
+        <TodoList todos={data} />
+        <TodoForm />
+      </div>
     </div>
   )
 }
