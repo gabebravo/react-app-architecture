@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 .App-logo {
@@ -26,6 +28,9 @@
 
 .App-link {
   color: #61dafb;
+  background-color: #282c34;
+  font-size: calc(10px + 2vmin);
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
