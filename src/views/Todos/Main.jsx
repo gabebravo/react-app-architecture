@@ -5,7 +5,7 @@ import {
 import RqMessage from '../../shared/RqMessage'
 import TodoList from './TodoList'
 
-export default function Todos() {
+export default function Main() {
   const { data, error, isLoading, isFetching, isSuccess } = useGetTodos()
 
   if(isLoading) {
