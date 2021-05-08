@@ -1,9 +1,9 @@
 export default function RqMessage({ message = '' }) {
   return message ? (
-    <div className="flex justify-center">
-      <h3 style={{ marginBottom: 20 }}>
+    <div className="flex justify-center mt-8">
+      <span className="text-4xl">
         {message}
-      </h3>
-  </div>
+      </span>
+    </div>
   ) : null
 }
