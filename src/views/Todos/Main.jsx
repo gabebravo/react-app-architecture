@@ -22,7 +22,7 @@ export default function Main() {
   }
 
   return isSuccess && (
-    <div className="flex justify-center mt-8">
+    <div className="flex justify-center mt-12">
       <div className="flex-col w-1/5">
         <TodoList todos={data} />
         <TodoForm />
