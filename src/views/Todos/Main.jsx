@@ -3,6 +3,7 @@ import {
   useGetTodos,
 } from '../../hooks/useTodoMutations';
 import InfoMessage from '../../shared/InfoMessage'
+import ErrorMessage from '../../shared/ErrorMessage'
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 
@@ -18,7 +19,7 @@ export default function Main() {
   }
 
   if(error) {
-    return <InfoMessage message="Whoops... an error occured on the server" />
+    return <ErrorMessage title="Whoops... " text="An error occured on the server" />
   }
 
   return isSuccess && (
