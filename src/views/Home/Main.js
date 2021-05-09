@@ -1,9 +1,9 @@
-import { useHistory } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import { useHistory } from 'react-router-dom'
+import logo from './logo.svg'
+import './Home.css'
 
-function App() {
-  let history = useHistory();
+function Home() {
+  let history = useHistory()
 
   return (
     <div className="App">
@@ -15,7 +15,7 @@ function App() {
         </span>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Home

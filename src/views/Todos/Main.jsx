@@ -2,7 +2,7 @@ import React from 'react'
 import {
   useGetTodos,
 } from '../../hooks/useTodoMutations';
-import RqMessage from '../../shared/RqMessage'
+import InfoMessage from '../../shared/InfoMessage'
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 
@@ -10,15 +10,15 @@ export default function Main() {
   const { data, error, isLoading, isFetching, isSuccess } = useGetTodos()
 
   if(isLoading) {
-    return <RqMessage message="Loading..." />
+    return <InfoMessage message="Loading..." />
   }
 
   if(isFetching) {
-    return <RqMessage message="Updating..." />
+    return <InfoMessage message="Updating..." />
   }
 
   if(error) {
-    return <RqMessage message="Whoops... an error occured on the server" />
+    return <InfoMessage message="Whoops... an error occured on the server" />
   }
 
   return isSuccess && (
