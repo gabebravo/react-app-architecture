@@ -28,7 +28,7 @@ export default function TodoInput() {
   }
 
   return (
-    <div className="mt-12">
+    <div className="mt-12" data-testid="todo-form">
       <form className="w-full max-w-sm" onSubmit={handleSubmit}>
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">

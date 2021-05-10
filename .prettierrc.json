@@ -1,0 +1,6 @@
+{
+  "semi": false,
+  "singleQuote": true,
+  "files": ["*.js", "*.jsx", "../src/views/**/*.jsx"]
+}
+
