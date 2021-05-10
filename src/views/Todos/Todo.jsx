@@ -6,7 +6,7 @@ export default function Todo({ todo }) {
   const todoPutRq = usePutTodo()
 
   return (
-    <>
+    <div data-testid="todo-item">
       <div>
         <span className="text-2xl"
           onClick={() => console.log(todo.id)}
@@ -26,6 +26,6 @@ export default function Todo({ todo }) {
             <i className="ri-close-circle-fill"></i>
         </span>
       </div>
-    </>
+    </div>
   )
 }
