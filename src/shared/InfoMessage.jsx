@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export default function InfoMessage({ message = '' }) {
   return (
     <div className="flex items-center bg-blue-500 text-white text-sm font-bold px-4 py-3" role="alert">
@@ -5,4 +7,8 @@ export default function InfoMessage({ message = '' }) {
       <p>{message}</p>
     </div>
   )
+}
+
+InfoMessage.propTypes = {
+  message: PropTypes.string,
 }

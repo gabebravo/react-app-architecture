@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function ErrorMessage({ title = '', text = '' }) {
   const [show, setShow] = React.useState(true)
@@ -18,4 +19,9 @@ export default function ErrorMessage({ title = '', text = '' }) {
       </span>
     </div>
   )
+}
+
+ErrorMessage.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
 }
