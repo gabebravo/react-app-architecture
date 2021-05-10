@@ -1,11 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import {
-  useGetTodos,
-  usePostTodo,
-  useDeleteTodo,
-  usePutTodo,
-} from '../../hooks/useTodoMutations'
+import { useGetTodos } from '../../hooks/useTodoMutations'
+import { wrapper } from '../../utils/testUtils'
 
 const mowTheLawn = {
   checked: true,
@@ -13,13 +8,6 @@ const mowTheLawn = {
   text: 'Mow the lawn',
   id: 'ea153500-aaab-11eb-b26d-e31f7e2a7914',
   updatedAt: 1619902090237,
-}
-
-const wrapper = ({ children }) => {
-  const queryClient = new QueryClient()
-  return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  )
 }
 
 test('useGetTodos returns data', async () => {
