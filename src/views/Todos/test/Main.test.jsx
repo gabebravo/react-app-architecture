@@ -1,6 +1,6 @@
 import { render, screen, prettyDOM } from '@testing-library/react'
 import { wrapper } from '../../../utils/testUtils'
-import { useGetTodos, usePostTodo, useDeleteTodo, usePutTodo } from '../../../hooks/useTodoMutations'
+import { useGetTodos, usePostTodo } from '../../../hooks/useTodoMutations'
 import Main from '../Main'
 
 jest.mock('../../../hooks/useTodoMutations', () => {
