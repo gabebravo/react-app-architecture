@@ -2,7 +2,7 @@ import { useHistory } from 'react-router-dom'
 import logo from './logo.svg'
 import './Home.css'
 
-function Home() {
+function Layout() {
   let history = useHistory()
 
   return (
@@ -18,4 +18,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Layout

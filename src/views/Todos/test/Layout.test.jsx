@@ -1,7 +1,7 @@
 import { render, screen, prettyDOM } from '@testing-library/react'
 import { wrapper } from '../../../utils/testUtils'
 import { useGetTodos, usePostTodo } from '../../../hooks/useTodoMutations'
-import Main from '../Main'
+import Layout from '../Layout'
 
 jest.mock('../../../hooks/useTodoMutations', () => {
   return {
@@ -13,12 +13,12 @@ jest.mock('../../../hooks/useTodoMutations', () => {
   }
 })
 
-describe('test Main Todo view component', () => {
+describe('test Layout Todo view component', () => {
   test('while loading', () => {
     useGetTodos.mockImplementation(() => ({
       isLoading: true,
     }))
-    render(<Main />, { wrapper })
+    render(<Layout />, { wrapper })
     const alert = screen.getByRole('alert')
     expect(alert).toHaveTextContent(/Loading.../i)
   })
@@ -27,7 +27,7 @@ describe('test Main Todo view component', () => {
     useGetTodos.mockImplementation(() => ({
       error: true,
     }))
-    render(<Main />, { wrapper })
+    render(<Layout />, { wrapper })
     const alert = screen.getByRole('alert')
     expect(alert).toHaveTextContent(/an error occured on the server/i)
   })
@@ -51,7 +51,7 @@ describe('test Main Todo view component', () => {
       erro: false,
     }))
   
-    render(<Main />, { wrapper })
+    render(<Layout />, { wrapper })
     const container = screen.getByTestId('container')
     const todoList = screen.getByTestId('todo-list')
     const todoForm = screen.getByTestId('todo-form')

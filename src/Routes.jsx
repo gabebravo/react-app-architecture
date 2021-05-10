@@ -5,8 +5,8 @@ import {
   Route,
 } from 'react-router-dom'
 
-const Home = lazy(() => import('./views/Home/Main'))
-const Todos = lazy(() => import('./views/Todos/Main'))
+const Home = lazy(() => import('./views/Home/Layout'))
+const Todos = lazy(() => import('./views/Todos/Layout'))
 const NoMatch = () => <>'There is nothing to see here'</>
 
 export default function App() {

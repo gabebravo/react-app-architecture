@@ -7,7 +7,7 @@ import ErrorMessage from '../../shared/ErrorMessage'
 import TodoList from './TodoList'
 import TodoForm from './TodoForm'
 
-export default function Main() {
+export default function Layout() {
   const { data, error, isLoading, isFetching, isSuccess } = useGetTodos()
 
   if(isLoading) {

@@ -6,7 +6,7 @@ export default function Todo({ todo }) {
   const todoPutRq = usePutTodo()
 
   return (
-    <div data-testid="todo-item">
+    <div className="flex justify-between" data-testid="todo-item">
       <div>
         <span className="text-2xl"
           onClick={() => console.log(todo.id)}
