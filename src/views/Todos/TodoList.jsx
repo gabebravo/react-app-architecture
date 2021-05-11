@@ -1,4 +1,5 @@
 import Todo from './Todo'
+import PropTypes from 'prop-types'
 
 export default function TodoList({ todos }) {
   return todos.length > 0 &&  (
@@ -10,4 +11,8 @@ export default function TodoList({ todos }) {
       )}    
     </ul>
   )
+}
+
+TodoList.propTypes = { 
+  todos: PropTypes.array,
 }

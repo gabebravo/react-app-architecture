@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { useDeleteTodo, usePutTodo } from '../../hooks/useTodoMutations'
 
 export default function Todo({ todo }) {
@@ -28,4 +29,14 @@ export default function Todo({ todo }) {
       </div>
     </div>
   )
+}
+
+Todo.propTypes = { 
+  todo: PropTypes.shape({
+    checked: PropTypes.bool,
+    createdAt: PropTypes.number,
+    text: PropTypes.string,
+    id: PropTypes.string,
+    updatedAt: PropTypes.number,
+  })
 }
